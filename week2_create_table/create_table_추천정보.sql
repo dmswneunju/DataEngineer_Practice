@@ -1,0 +1,8 @@
+CREATE TABLE 추천정보 (
+  추천ID INT PRIMARY KEY,
+  고객ID INT,
+  상품ID INT,
+  상품유형추천코드 VARCHAR(20),
+  FOREIGN KEY (고객ID) REFERENCES 고객(고객ID),
+  FOREIGN KEY (상품ID) REFERENCES 상품(상품ID)
+);
